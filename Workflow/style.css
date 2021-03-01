@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+body{
+  background-color: #f7f7f7;
+}
+
+/* Aligning elements to center */
+header, .form-container {
+  text-align: center;
+} 
+
+/* Adjusting Header */
+header{
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+/* Styling form */
+div.form-container{
+  border: 1px solid #7C7C7C;
+  margin:23px 5px;
+  border-radius: 3px;
+  background-color:white
+}
+
+#user-input{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+}
+
+
+input, textarea, select{
+  margin-top:2px;
+  margin-bottom:30px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #045AFF;
+  font-size:18px;
+  border-radius: 1px;
+}
+
+
+textarea{
+  border: 1px solid #045AFF;
+  border-radius: 3px;
+  font-size:16px;
+}
+
+textarea:focus{
+  border: 2px solid #045AFF;
+}
+
+.submit-btn{
+  text-align:center;
+}
+
+input[type="submit"]{
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border: none;
+  background-color:white;
+  color: #045AFF;
+  padding: 7px 28px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius:5px;
+  letter-spacing: 1px;
+  box-shadow: 0px 1.7px 5px rgba(0, 0, 0, 0.25);
+  transition-property: background-color, color;
+}
+
+input[type="submit"]:hover{
+  background-color: #045AFF;
+  color:white;
+}
+
+/* Styling Tables */
+table{
+  border-bottom: 1px solid black;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead{
+  color: white;
+  background-color: #045AFF;
+  border: 1px solid #045AFF;
+}
+
+.table tbody tr{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  cursor: move;
+}
+td{
+  padding:12px 0;
+}
+
+.delete, .id{
+  padding: 0 10px;
+}
+
+.fa-trash{
+  cursor: pointer;
+  color:rgb(22, 22, 22);
+}
+
+h2{
+  margin-bottom: 5px;
+  margin-top: 40px;
+}
+
+.people{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dragging{
+  opacity: 50%;
+  border: 1px solid black;
+}
+
+.dragOver{
+  border: 2px dashed red;
+}
+
+/* Alerts */
+.alerts{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fail, .success{
+  width: 50%;
+  padding:8px 0;
+  border-radius: 4px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  display:none;  
+}
+
+.fail{
+  background-color: red;
+  color: white;
+}
+
+.success{
+  background-color: green;
+  color: white;
+}
+
+/* Adding responsiveness */
+main{
+  display:grid;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 20em)) 1fr;
+}
+
+header, div.form-container, div.tables, div.alerts{
+  grid-column: 2/4;
+}
